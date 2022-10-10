@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
+
+$cor60: #0D1B2A;
+$cor30: #4F6D7A;
+$cor10: #DBE9EE; 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+body{
+    background-color: $cor60;
+    
+}
+//--------------HEADER--------------
+header{
+    margin-bottom: 50px;
+    .container{
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        .header{
+            padding: 10px 0px;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            align-items: center;
+            background-color:  rgba(13, 27, 42, 0.90);
+            .logo{
+                img{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            .navBar{
+                position: relative;
+                .hamburguer{
+                    cursor: pointer;
+                    .bar{
+                        display: block;
+                        width: 40px;
+                        height: 3px;
+                        margin: 7px 1px;
+                        background-color: $cor10;
+                        transition: 0.3s;
+                        &.active{
+                            &:nth-child(1){
+                                transform: translateY(10px) rotate(45deg);
+                            }
+                            &:nth-child(2){
+                                display: none;
+                            }
+                            &:nth-child(3){
+                                transform: translateY(0px) rotate(-45deg);
+                            }
+                        }
+                    }
+                }
+                .navItens{
+                    display: flex;
+                    flex-flow: column;
+                    align-items: flex-start;
+                    position: fixed;
+                    top: 80px;
+                    left: -100%;
+                    gap: 15px;
+                    transition: ease-in-out 0.2s;
+                    background-color: rgba(13, 27, 42, 0.90);
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 20px;
+                    &.active{
+                        left: 0px;
+                    }
+                    .navLink{
+                        width: 250px;
+                        text-align: center;
+                        margin: 20px 0px 0px 20px;
+                        text-decoration: none;
+                        color: $cor60;
+                        font-size: 1.5rem;
+                        background-color: rgba(255, 255, 255, 0.60);
+                        padding: 30px 20px;
+                        border-radius: 50px;
+                        &.active{
+                            background-color: rgba(13, 27, 42, 0.10);
+                            color: $cor10;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//--------------CONTEUDO--------------
+.conteudo{
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+//--------------CONTEUDO - SLIDER--------------
+.slide{
+    margin-bottom: 80px;
+    .carousel-inner{
+        border-radius: 20px;
+    }
+    p{
+        text-align: justify;
+        text-shadow: 2px 2px 3px $cor60;
+        font-size: 14px;
+    }
+}
+.carousel-control-prev-icon{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.571);
+    border-radius: 50%;
+    filter: blur(0.6px);
+}
+.carousel-control-next-icon{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.571);
+    border-radius: 50%;
+    filter: blur(0.6px)
+}
+
+.carousel-indicators [data-bs-target]{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: relative;
+    top: 50px;
+}
+//--------------CONTEUDO - NOTÍCIAS E ANÁLISES--------------
+.conteudo{
+    h1{
+        color: $cor10;
+        font-size: 36px;
+        margin-left: 103px;
+        margin-bottom: 50px;
+        font-weight: bold;
+        svg{
+            width: 50px;
+            height: 50px;
+            margin-right: 5px;
+        }
+    }
+    .noticias{
+        margin-bottom: 50px;
+        .imagem img{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .descricao{
+            a{
+                text-decoration: none;
+                color: $cor10;
+                font-size: 18px;
+            }
+            p{
+                color: $cor10;
+                font-size: 14px;
+            }
+            button{
+                background-color: $cor10;
+                width: 104px;
+                height: 30px;
+                border: none;
+                border-radius: 20px;
+                color: $cor60;
+                transition: ease 0.2s;
+                &:hover{
+                    background-color: $cor30;
+                    color: $cor10; 
+                }
+            }
+            
+        }
+    }
+    .ordemAlfa{
+        ul{
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            li{
+                list-style: none;
+                color: $cor10;
+                font-size: 18px;
+                a{
+                    color: $cor10;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .analise{
+        margin-bottom: 50px;
+        .imagem{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .titulo{
+            a{
+                text-decoration: none;
+                color: $cor10;
+                font-size: 18px;
+            }
+            p{
+                color: $cor10;
+                font-size: 20px;
+                span{
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+            }
+        }
+        .descricao{
+            color: $cor10;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        button{
+            background-color: $cor10;
+            width: 104px;
+            height: 30px;
+            border: none;
+            border-radius: 20px;
+            color: $cor60;
+            transition: ease 0.2s;
+            &:hover{
+                background-color: $cor30;
+                color: $cor10; 
+            }
+        }
+    }
+//--------------Notícias / Análises Game - CONTEUDO--------------
+    .pagi_game{
+        .parag{
+            margin-bottom: 50px;
+        }
+        .banner{
+            background: url(../Imagens/1280x720/payday2.jpg) no-repeat center;
+            background-size: cover;
+            height: 280px;
+            border-radius: 20px;
+        }
+        p{
+            color: $cor10;
+            font-size: 14px;
+        }
+    }
+//--------------CONTACTOS--------------
+    #formContactos{
+        input, textarea{
+            width: 100%;
+            padding: 10px;
+            background-color: $cor60;
+            border: 2px solid $cor30;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            color: $cor10;
+        }
+        #btnFormContactos{
+            width: 100px;
+            background-color: $cor10;
+            border: 1px solid $cor10;
+            border: none;
+            color: $cor60;
+            font-weight: bold;
+            &:hover{
+                background-color: $cor60;
+                border: 1px solid $cor10;
+                color: $cor10;
+            }
+        }
+    }
+}
+//--------------FOOTER--------------
+footer{
+//-------------- FOOTER - NEWSLETTER --------------
+    .newsletter{
+        margin-bottom: 10px;
+        position: relative;
+        h3{
+            font-size: 16px;
+            color: $cor10;
+            position: relative;
+        }
+        .subscrever{
+            position: relative;
+            input{
+                background-color: #0D1B2A;
+                height: 55px;
+                padding-left: 47px;
+                border-radius: 10px;
+                color: #DBE9EE;
+            }
+            button{
+                height: 55px;
+                background-color: #DBE9EE;
+                border: none;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                position: relative;
+                color: #0D1B2A;
+                left: -15px;
+                &:hover{
+                    background-color: #4F6D7A;
+                    color:#DBE9EE;
+                }
+            }
+            svg{
+                position: absolute;
+                color: #DBE9EE;
+                width: 25px;
+                height: 20px;
+                top: 17px;
+                left: 15px;
+            }
+
+        }
+        .validar{
+            position: relative;
+            input{
+                width: 22px;
+                height: 22px;
+                background-color: #0D1B2A;
+                border: 2px solid #4F6D7A;
+                cursor: pointer;
+            }
+            label{
+                color:#4F6D7A;
+                font-size: 12px;
+                a{
+                    color: #DBE9EE;
+                }
+            }
+        }
+    }
+//-------------- FOOTER - ABOUT A2G --------------
+    .about{
+        margin-bottom: 50px;
+        position: relative;
+        top: 20px;
+        ul{
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 110px;
+            li{
+                list-style: none;
+                a{
+                    color:#DBE9EE;
+                    text-decoration: none;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+//-------------- FOOTER - REDES SOCIAIS --------------
+    .redes_sociais{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 50px;
+        svg{
+            color:#DBE9EE;
+            width: 40px;
+            height: 40px;
+        }
+    }
+//-------------- FOOTER - COPYRIGHT --------------
+    .copyright{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        color: #DBE9EE;
+    }
+}
+//DESKTOP
+@media (min-width: 992px){
+    header{
+        margin-top: 0px;
+        .container{
+            margin-top: 20px;
+            margin-bottom: 50px;
+            position: relative;
+            .header{
+                padding: 0px;
+                width: auto;
+                display: grid;
+                grid-template-columns: 1fr auto;
+                background-color: $cor60;
+                .logo{
+                    img{
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+                .navBar{
+                    position: relative;
+                    .hamburguer{
+                        display: none;
+                    }
+                    .navItens{
+                        display: flex;
+                        flex-flow: row;
+                        position: relative;
+                        top: 0;
+                        left: auto;
+                        .navLink{
+                            text-decoration: none;
+                            color: $cor30;
+                            font-size: 1.5rem;
+                            padding: 3px 10px;
+                            border-radius: 20px;
+                            background-color: $cor60;
+                            &:hover{
+                                color: $cor10;
+                                background-color: $cor60;
+                            }
+                            &:active{
+                                color: $cor10;
+                                background-color: $cor60;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }  
+    .mobile{
+        display: none;
+    }
+    .conteudo{
+        #titulo{
+            display: none;
+        }
+    }
+}
+//--------------MOBILE - Alterações--------------
+@media (max-width: 992px){
+    .hide{
+        display: none;
+    }
+    .separadorNot{
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: $cor30;
+        margin-bottom: 30px;
+    }
+    .conteudo{
+        .tit_game{
+            font-size: 30px;
+        }
+        h1{
+            text-align: center;
+            margin-left: 0px;
+        }
+    }
+}
