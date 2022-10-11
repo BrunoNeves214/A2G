@@ -1,4 +1,3 @@
-//---------- HEADER ----------
 //---------- Animação Hambuguer - NAVBAR ---------
 function navBar(){
     let bar1 = document.getElementById('bar1')
@@ -26,4 +25,9 @@ if(titulo.innerText == 'Análise'){
 }
 if(titulo.innerText == 'Contactos'){
     navLink3.classList.toggle('active')
+}
+
+//---------- Notícias / Análises Game - Previous btn ---------
+function voltar(){
+    window.history.back()
 }

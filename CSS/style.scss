@@ -147,6 +147,14 @@ header{
             margin-right: 5px;
         }
     }
+    p{
+        color: rgba(255, 255, 255, 0.60);
+        font-size: 14px;
+        b{
+            font-size: 16px;
+            color: $cor10;
+        }
+    }
     .noticias{
         margin-bottom: 50px;
         .imagem img{
@@ -239,6 +247,9 @@ header{
     }
 //--------------Notícias / Análises Game - CONTEUDO--------------
     .pagi_game{
+        .previous{
+            cursor: pointer;
+        }
         .parag{
             margin-bottom: 50px;
         }
@@ -443,6 +454,27 @@ footer{
         #titulo{
             display: none;
         }
+//--------------Sobre A2G--------------
+        .sobre{
+            img{
+                width: 30%;
+                border-radius: 20px;
+            }
+            .grupo1{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+                margin-bottom: 20px;
+            }
+            .grupo2{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+                margin-bottom: 20px;
+            }
+        }
     }
 }
 //--------------MOBILE - Alterações--------------
@@ -464,6 +496,13 @@ footer{
         h1{
             text-align: center;
             margin-left: 0px;
+        }
+        .sobre{
+            img{
+                width: 100%;
+                margin-bottom: 20px;
+                border-radius: 20px;
+            }
         }
     }
 }
